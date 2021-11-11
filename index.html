@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="calculadora">
+        <div id="visor">
+            <label id="sinal"></label>
+            <input type="text" id="resultado" value="" readonly>
+        </div>
+
+        <section>
+            <!--numeros-->
+            <div class="buttons">
+                <input type="button" value="0" class="btn longo" name="btn" id="zero">
+                <input type="button" value="1" class="btn" name="btn" id="um">
+                <input type="button" value="2" class="btn" name="btn" id="dois">
+                <input type="button" value="3" class="btn" name="btn" id="tres">
+                <input type="button" value="4" class="btn" name="btn" id="quatro">
+                <input type="button" value="5" class="btn" name="btn" id="cinco">
+                <input type="button" value="6" class="btn" name="btn" id="seis">
+                <input type="button" value="7" class="btn" name="btn" id="sete">
+                <input type="button" value="8" class="btn" name="btn" id="oito">
+                <input type="button" value="9" class="btn" name="btn" id="nove">
+                <input type="button" value="." class="btn longo" name="btn" id="ponto">
+            </div>
+            <!--operações-->
+            <div id="operacoes">
+                <input type="button" value="+" class="soma opera" name="soma" id="soma">
+                <input type="button" value="-" class="subtrair opera" name="sub" id="sub">
+                <input type="button" value="÷" class="dividir opera" name="divi" id="divi">
+                <input type="button" value="x" class="mult opera" name="mult" id="mult">
+            </div>
+            <!--funções-->
+            <div class="buttons">
+                <input type="button" value="=" class="equal especiais" name="equal">
+                <button id="clear" class="especiais"><span id="del"> DEL</span><span id="clr">CLR</span></button>
+            </div>
+        </section>
+    </div>
+    <script src="src/notify.min.js"></script>
+    <script type="module">
+        import {App} from "./src/inicializar.js"
+
+        App.start()
+    </script>
+</body>
+</html>
