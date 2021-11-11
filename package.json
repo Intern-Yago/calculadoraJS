@@ -4,9 +4,9 @@
   "description": "",
   "main": "electron/index.js",
   "scripts": {
-    "start": "electron .",
+    "dev": "electron .",
     "build": "npx electron-packager . --out=packages",
-    "test": "node"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
