@@ -4,7 +4,8 @@
   "description": "",
   "main": "electron/index.js",
   "scripts": {
-    "start":"electron ."
+    "start":"electron .",
+    "build":"npx electron-packager . --out=packages"
   },
   "keywords": [],
   "author": "",
