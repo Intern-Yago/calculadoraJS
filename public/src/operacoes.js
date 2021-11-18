@@ -10,25 +10,34 @@ function valores(valor){
         return 'erro'
     }
 }
-
+var listOperacoes = ["-", "+", "/", "*"]
 const operacoes = {
     calculo(){
         $("input[name=opera]").click(function(){
-            console.log($(this).val())
-            if($(this).val() == "x"){
-                valores("x")
-                $("#resultado").val($("#resultado").val()+ "*")
+            let string = $("#resultado").val()
+            if(listOperacoes.includes(string.charAt(string.length - 1))){
+                $.notify("Insira os valores corretamente", "error")
             }else{
-                valores($(this).val())
-                $("#resultado").val($("#resultado").val()+ $(this).val())
+                if($(this).val() == "x"){
+                    valores("x")
+                    $("#resultado").val($("#resultado").val()+ "*")
+                }else{
+                    valores($(this).val())
+                    $("#resultado").val($("#resultado").val()+ $(this).val())
+                }
             }
         })
 
         $("input[name=equal]").click(function(){
-            valores($(this).val())
-            $("#resultado").val(eval($("#resultado").val()))
-            $("#sinal").text("")
-            op = ""
+            let string = $("#resultado").val()
+            if(listOperacoes.includes(string.charAt(string.length - 1))){
+                $.notify("Insira os valores corretamente", "error")
+            }else{
+                valores($(this).val())
+                $("#resultado").val(eval($("#resultado").val()))
+                $("#sinal").text("")
+                op = ""
+            }
             
         })
     }
