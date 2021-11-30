@@ -1,7 +1,7 @@
 {
   "name": "calculator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Esta calculadora foi desenvolvida em **JavaScript** utilizando as tecnologias: - *Electron* - *NodeJS* - *JQuery*",
   "main": "electron/index.js",
   "scripts": {
     "dev": "electron .",
@@ -16,5 +16,13 @@
   },
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Intern-Yago/calculadoraJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Intern-Yago/calculadoraJS/issues"
+  },
+  "homepage": "https://github.com/Intern-Yago/calculadoraJS#readme"
 }

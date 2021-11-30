@@ -1,3 +1,6 @@
+*{
+    user-select: none;
+}
 body{
     width: 456px;
 }
@@ -24,6 +27,7 @@ input, button{
     top: 16px;
 
     background: #FFFFFF;
+    user-select: text;
 }
 #resultado{
     border: none;
